@@ -1,4 +1,4 @@
-#FROM openjdk
+#FROM openjdk:8
 FROM maven
 MAINTAINER "priyanka18feb@gmail.com"
 
@@ -18,4 +18,5 @@ ADD src /code/src
 RUN ["mvn", "package", "-DskipTests"]
 
 EXPOSE 8080
-CMD ["java", "-jar", "target/online-bank-0.0.1-SNAPSHOT.jar"]
+
+ENTRYPOINT ["java", "-jar", "target\UserFront.jar"]
