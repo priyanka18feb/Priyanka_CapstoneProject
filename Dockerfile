@@ -17,6 +17,6 @@ ADD pom.xml /code/pom.xml
 ADD src /code/src
 RUN ["mvn", "package", "-DskipTests"]
 
-EXPOSE 8080
+EXPOSE 8085
 
 ENTRYPOINT ["java", "-jar", "target\UserFront.jar"]
